@@ -137,6 +137,10 @@ def main():
                     "Test alert from the new off-PC monitor. Checks: "
                     + ", ".join(v[0] for v in CHECKS.values()) + ". No action needed.")
         sys.exit(0 if ok else 1)
+    if not ((os.environ.get("TELEGRAM_BOT_TOKEN") and os.environ.get("TELEGRAM_CHAT_ID"))
+            or (os.environ.get("RESEND_API_KEY") and os.environ.get("ALERT_EMAIL_TO"))):
+        print("::error::no alert channel configured (TELEGRAM_* or RESEND_API_KEY/ALERT_EMAIL_TO secrets)")
+        sys.exit(1)
     st = load()
     changed = False
     for key, (label, fn) in CHECKS.items():
