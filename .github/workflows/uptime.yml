@@ -1,5 +1,6 @@
 name: uptime
 # Off-PC uptime monitor (LedgerSpeak H-13 step 3). GitHub can start scheduled runs several minutes late.
+# Repo moved to amagisolutionsgroup 2026-11-24; this comment re-registers the schedule.
 on:
   schedule:
     - cron: "*/5 * * * *"
