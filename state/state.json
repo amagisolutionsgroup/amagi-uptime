@@ -1,1 +1,19 @@
-{}
+{
+ "_saved_at": 1795507610.6743786,
+ "amagi_site": {
+  "down_alerted_at": null,
+  "fails": 0
+ },
+ "app_health": {
+  "down_alerted_at": null,
+  "fails": 0
+ },
+ "cron_heartbeat": {
+  "down_alerted_at": null,
+  "fails": 0
+ },
+ "getledgerspeak": {
+  "down_alerted_at": null,
+  "fails": 0
+ }
+}
